@@ -21,7 +21,6 @@ function adFunction() {
     const mainDocument = document.getElementsByClassName(
         "video-ads ytp-ad-module"
     );
-    console.log(mainDocument);
     const playerOverlay = document.getElementsByClassName(
         "ytp-ad-player-overlay"
     );
