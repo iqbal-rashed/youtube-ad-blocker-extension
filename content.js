@@ -64,11 +64,9 @@ function adFunction() {
                 }
             }
             handleSkipBtn();
-            console.log("Video Ad Blocked!!!");
         }
         if (imageOverlay.length > 0) {
             imageOverlay[0].style.visibility = "hidden";
-            console.log("Image Ad blocked!!!");
         }
     }
 }
