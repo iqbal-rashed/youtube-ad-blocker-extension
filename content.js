@@ -4,20 +4,8 @@ window.onload = () => {
 };
 
 function selfObserver(documentNode) {
-    const observer = new MutationObserver(function (mutationList) {
-        for (let i = 0; i < mutationList.length; i++) {
-            const element = mutationList[i];
-            if (element.type === "childList") {
-                if (
-                    element.target.attributes &&
-                    element.target.attributes.class &&
-                    element.target.attributes.class.value ===
-                        "video-ads ytp-ad-module"
-                ) {
-                    adFunction();
-                }
-            }
-        }
+    const observer = new MutationObserver(function () {
+        adFunction();
     });
 
     const config = {
@@ -33,6 +21,7 @@ function adFunction() {
     const mainDocument = document.getElementsByClassName(
         "video-ads ytp-ad-module"
     );
+    console.log(mainDocument);
     const playerOverlay = document.getElementsByClassName(
         "ytp-ad-player-overlay"
     );
