@@ -36,6 +36,8 @@ function adFunction() {
         "video-stream html5-main-video"
     );
 
+    const playerAds = document.getElementById("player-ads");
+
     function handleSkipBtn() {
         if (skipBtn.length > 0) {
             skipBtn[0].click();
@@ -56,5 +58,9 @@ function adFunction() {
         if (imageOverlay.length > 0) {
             imageOverlay[0].style.visibility = "hidden";
         }
+    }
+
+    if (playerAds) {
+        playerAds.style.display = "none";
     }
 }
