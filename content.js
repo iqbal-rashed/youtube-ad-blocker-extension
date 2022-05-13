@@ -36,6 +36,8 @@ function adFunction() {
         "video-stream html5-main-video"
     );
 
+    const textOverlay = document.getElementsByClassName("ytp-ad-text-overlay");
+
     const playerAds = document.getElementById("player-ads");
 
     function handleSkipBtn() {
@@ -62,5 +64,9 @@ function adFunction() {
 
     if (playerAds) {
         playerAds.style.display = "none";
+    }
+
+    if (textOverlay.length > 0) {
+        textOverlay[0].style.display = "none";
     }
 }
